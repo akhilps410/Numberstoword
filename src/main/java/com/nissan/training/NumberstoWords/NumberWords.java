@@ -20,7 +20,7 @@ public class NumberWords {
 	};
 	
 	
-	public  String toWords( int n ) {
+	public static  String toWords( int n ) {
 		
 		
 		
