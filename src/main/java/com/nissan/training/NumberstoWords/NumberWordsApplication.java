@@ -16,18 +16,25 @@ public final class NumberWordsApplication {
 		while( true ) {
 			try {
 				System.out.print( "Enter number (0 to exit): " ) ;
-				String value = reader.readLine() ;
-				int number = Integer.parseInt( value ) ;
-				if (number==0)
-				{
-					break;
+				String value;
+				try {
+					value = reader.readLine();
+					int number = Integer.parseInt( value ) ;
+					if (number==0)
+					{
+						break;
+					}
+					else
+					{
+						String result=numberWords.toWords(number);
+						System.out.println(result);
+					}
+				} catch (IOException e) {
+					System.out.println("Input problem");
 				}
-				else
-				{
-					String result=numberWords.toWords(number);
-					System.out.println(result);
-				}
-			} catch ( NumberFormatException | IOException e ) {
+				
+				
+			} catch ( NumberFormatException e) {
 				System.out.println( "Invalid number" ) ;
 			}
 		}
