@@ -1,16 +1,15 @@
 package com.nissan.training.NumberstoWords;
 
-import org.junit.*;
+import org.junit.Assert;
+import org.junit.Test;
+
 
 
 
 public class NumberWordsTests {
 	private NumberWords numberWords ;
 	
-	@Before
-	public void setup() {
-		numberWords = new NumberWords() ;
-	}
+	
 
 	@Test
 	public void numberOutOfRangeReturnsError() {
